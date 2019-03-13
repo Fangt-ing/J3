@@ -33,12 +33,13 @@ public class J3 {
 						pln = 2;
 					else
 						pln = 1;
-				} else throw new Message("Illegal move!");
+//				} else throw new Message("Illegal move!");
 //				try {
-//					System.out.println("\nMovement is not allowed, please try a new move!\n");
+					System.out.println("\nMovement is not allowed, please try a new move!\n");
 //				} finally {
 //					System.out.println("\nPiece moved!\n");
 				}
 			}
 		}
 	}
+}
