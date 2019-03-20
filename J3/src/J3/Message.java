@@ -5,12 +5,13 @@ public class Message extends Exception{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-
+	String error;
 	public Message (String error) {
+		this.error=error;
 	}
 	
-	public static void err(boolean legal) throws Message {
-		if(!Move.check) throw new Message("\nIllegal move!\n");
+	@Override
+	public String getMessage() {
+		return error;
 	}
 }
