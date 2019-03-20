@@ -11,10 +11,9 @@ public class J3 {
 		Scanner s = new Scanner(System.in);
 		int pln = 1;
 		while (true) {
-			boolean legal = false;
 			bd.printBoard();
 			System.out.println("Turn of player number: " + pln);
-			while (!legal) {
+//			while (!bd.legal) {
 				System.out.println("Coordinate of piece to move");
 				System.out.print("Enter X:  ");
 				int oldX = s.nextInt();
@@ -40,4 +39,4 @@ public class J3 {
 				}
 				
 				}
-			}}}
+			}}

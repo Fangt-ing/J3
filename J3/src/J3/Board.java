@@ -47,17 +47,19 @@ public class Board {
 					}	
 				}
 		
+		boolean legal = false;
 		public void movePiece(int x0, int y0, int x1, int y1, int turn) throws Message {
-			
 			if (board[x0][y0] == '1' && Math.abs(x1-x0) == Math.abs(y1-y0) && board[x1][y1] == ' ' &&
 					turn == 1) {
 				board[x1][y1] = '1';
 				board[x0][y0] = ' ';
+				legal = true;
 							}
-			else if (board[x0][y0] == '2' && Math.abs(x1-x0) == Math.abs(y1-y0) && board[x1][y1] == ' ' &&
+			if (board[x0][y0] == '2' && Math.abs(x1-x0) == Math.abs(y1-y0) && board[x1][y1] == ' ' &&
 					turn == 2) {
 				board[x1][y1] = '2';
 				board[x0][y0] = ' ';
+				legal = true;
 			}		
 			throw new Message("Illegal move!");
 		}
