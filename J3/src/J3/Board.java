@@ -55,12 +55,14 @@ public class Board {
 				board[x0][y0] = ' ';
 				legal = true;
 							}
-			if (board[x0][y0] == '2' && Math.abs(x1-x0) == Math.abs(y1-y0) && board[x1][y1] == ' ' &&
+			
+			else if (board[x0][y0] == '2' && Math.abs(x1-x0) == Math.abs(y1-y0) && board[x1][y1] == ' ' &&
 					turn == 2) {
 				board[x1][y1] = '2';
 				board[x0][y0] = ' ';
 				legal = true;
-			}		
-			throw new Message("Illegal move!");
+			}
+			
+			else throw new Message("Illegal move!");
 		}
 }
